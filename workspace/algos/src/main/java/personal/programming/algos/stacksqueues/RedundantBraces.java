@@ -5,6 +5,7 @@ import java.util.Stack;
 public class RedundantBraces {
 
 
+
     public int braces(String A){
         Stack<Character> characterStack = new Stack<>();
         for(int i=0;i<A.length();i++){
