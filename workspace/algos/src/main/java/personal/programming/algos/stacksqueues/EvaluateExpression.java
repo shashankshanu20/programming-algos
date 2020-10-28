@@ -14,7 +14,30 @@ public class EvaluateExpression {
         arrayList.add("3");
         arrayList.add("*");
 
-        System.out.println(evalRPN(arrayList));
+//        System.out.println(evalRPN(arrayList));
+//        System.out.println(longestValidParentheses(")()))(())((())))))())()(((((())())((()())(())((((())))())((()()))(()(((()()(()((()()))(())()))((("));
+        System.out.println(longestValidParentheses("((()(((((()(()((()(()))))())))()())((()))))))(())()()("));
+    }
+
+    public static int longestValidParentheses(String A) {
+        int maxLength = 0;
+        Stack<Integer> stack = new Stack<>();
+        stack.push(-1);
+        for(int i = 0;i<A.length();i++){
+            if(A.charAt(i)==')'){
+                if(!stack.isEmpty())
+                     stack.pop();
+                if(stack.isEmpty()){
+                    stack.push(i);
+                }else{
+                    maxLength = Math.max(maxLength, i - stack.peek());
+                }
+            }else{
+                stack.push(i);
+            }
+
+        }
+        return maxLength;
     }
 
 

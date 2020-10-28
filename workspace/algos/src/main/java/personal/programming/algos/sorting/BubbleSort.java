@@ -5,7 +5,7 @@ import java.util.List;
 
 public class BubbleSort {
     public static void main(String []args){
-        System.out.println("---------- Quick Sort ---------");
+        System.out.println("---------- Bubble Sort ---------");
         List<Integer> array = Arrays.asList(23, 45, 11, 47, 2, 23, 65, 24);
         System.out.println("Before sorting...");
         System.out.println(array);
